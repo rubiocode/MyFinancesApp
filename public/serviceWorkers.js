@@ -1,4 +1,4 @@
-const STATIC_ASSETS= 'static-cache-v1';
+const STATIC_ASSETS = 'static-cache-v1';
 
 const DATA_CACHE_NAME = "data-cache-v1";
 
@@ -15,19 +15,19 @@ const staticAssets = [
 
 
 //Install Phase
-self.addEventListener('install', event =>{
-    event.waitUntil( 
+self.addEventListener('install', event => {
+    event.waitUntil(
         caches.open(STATIC_ASSETS).then(cache => cache.addAll(staticAssets))
     );
     self.skipWaiting();
 });
 
 //Activate Phase
-self.addEventListener("activate", event=> {
+self.addEventListener("activate", event => {
     event.waitUntil(
         caches.keys().then(keyList => {
             return Promise.all(
-                keyList.map(key =>{
+                keyList.map(key => {
                     //removing everything that isnt equal to what we are putting in 
                     if (key !== STATIC_ASSETS && key !== DATA_CACHE_NAME) {
                         console.log("Removing old cache data", key);
@@ -44,6 +44,6 @@ self.addEventListener("activate", event=> {
 //Fetching
 self.addEventListener('fetch', event =>{
     event.respondWith( 
-        caches.match(event.request.url).then(response => response || fetch (event.request.url))
+        caches.match(event.request).then(response => response || fetch (event.request))
     )
 });
