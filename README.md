@@ -5,7 +5,7 @@
 
 Built with: Service Workers, Manifest, IndexedDB
 
-URL of the Heroku deployed application: 
+URL of the Heroku deployed application: https://hidden-savannah-95570.herokuapp.com/
 
 URL of the GitHub repository: https://github.com/rubiocode/MyFinancesApp
 
@@ -36,7 +36,7 @@ SO THAT my account balance is accurate when I am traveling
 
 ## View
 
-To view the Heroku deployed webpage click [here]().
+To view the Heroku deployed webpage click [here](https://hidden-savannah-95570.herokuapp.com/).
 
 This is what the application looks like:
 
