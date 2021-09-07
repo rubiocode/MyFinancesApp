@@ -1,70 +1,103 @@
-# Unit 19 PWA Homework: Online/Offline Budget Trackers
+<div align="center">
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+# My Finances App
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
 
-Offline Functionality:
+Built with: Service Workers, Manifest, IndexedDB
 
-  * Enter deposits offline
+URL of the Heroku deployed application: 
 
-  * Enter expenses offline
+URL of the GitHub repository: https://github.com/rubiocode/MyFinancesApp
 
-When brought back online:
+</div>
 
-  * Offline entries should be added to tracker.
+## Table of Contents 
 
-## User Story
+* [Description](#description)
+    * [User Story](#user-story)
+* [View](#view)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Built With](#built-with)
+* [Credits](#credits)
+* [License](#license)
+
+## Description
+
+_My Finances App_ is a progressive web application that uses service workers, manifest and IndexedDB to create an application able to be used online and offline. This simple and easy application allows the user to track their finances while allowing them to access full functionality of the application anytime whether the user is online or offline. 
+
+### User Story
+
+```md
 AS AN avid traveller
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
 SO THAT my account balance is accurate when I am traveling
+```
 
-## Business Context
+## View
 
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+To view the Heroku deployed webpage click [here]().
+
+This is what the application looks like:
+
+Landing Page: 
+
+<img src="public/img/Main.png" alt="Landing Page" style="height: 40rem ; width:40 rem;"/>
 
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## Installation 
 
-- - -
+To start using this _My Finances App_ you must follow these instructions:
 
-## Commit Early and Often
+* Fork and clone this repository and save it to your computer. For help how to fork and clone click [here](https://guides.github.com/activities/forking/) 
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+* Open your terminal and make sure node.js is installed. To download node.js click [here](https://nodejs.org/en/download/)
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+* Run command _npm i_ to install all the dependencies in this repository. 
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+## Usage
 
-* Follow these guidelines for committing:
+_My Finances App_ The user is able to add or subtract their finances accordingly.  
 
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+If you are cloning this repository, run the following commands at the root of your project:
 
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+`npm start` or `nodemon server.js` to start your server
 
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
 
-  * Test your application before you commit to ensure functionality at every step in the development process
+## Built With
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+* [Express](https://expressjs.com/) - A Node.js web application server framework used to build web applications.
 
-* Deploy your application with [Heroku and MongoDB Atlas.](../04-Important/MongoAtlas-Deploy.md)
+* [JavaScript ES6](https://www.w3schools.com/Js/js_es6.asp) - Programming language that creates dynamic website content. ES6 or ECMAScript 6 was the second major revision to JavaScript.
 
-## Submission on BCS
+* [Node.js](https://nodejs.dev/learn/) - Node.js is an open-source, low-level, back-end JavaScript runtime platform that uses asynchronous programming and is a popular tool for almost any kind of project!.
 
-* You are required to submit the following:
+* [dotenv package](https://nodejs.dev/learn/) - A package to store enviromental variables.
 
-  * the URL to the deployed application
+* [mongoose package](https://www.npmjs.com/package/mongoose) - Mongoose is a MongoDB object modeling tool designed to work in asynchronous enviroment. 
 
-  * the URL to the Github repository
+* [morgan package = dev](https://www.npmjs.com/package/morgan) - 'Dev' specific adds color to the terminal request routes. Helps makes it easier to spot broken routes in the terminal. 
 
-- - -
+* [Compression package](https://www.npmjs.com/package/compression) - Compression middleware to minified JavaScript and files. 
 
-## Hint
 
-* In order to cache dynamic content, i.e. users' inputs for withdrawals or deposits, incorporate `indexedDB` from the previous module.
+## Credits
 
-* Use [Google](https://www.google.com) or another search engine to research this topic.
+Frontend starting files provided © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
+## License
+
+![badge](https://img.shields.io/badge/License-mit-blue)
+
+Copyright 2021 Rubidia Rubio. Licensed under the [MIT License](https://opensource.org/licenses/MIT)
+
+All Rights Reserved. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
