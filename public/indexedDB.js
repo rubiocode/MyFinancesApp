@@ -1,8 +1,8 @@
 //Creating variable to hold db connection
 let db;
 
-// Creating FinanceDB and setting it to v1.
-const request = indexedDB.open('FinanceDB' || 1);
+// Creating db and setting it to v1.
+const request = indexedDB.open('budget_tracker' || 1);
 
 
 //this event will fire if the db versions changes.
